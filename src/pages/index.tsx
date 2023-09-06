@@ -30,7 +30,7 @@ export default function Home({ products }: HomeProps) {
         <HomeContainer ref={sliderRef} className="keen-slider">
             {products.map(products => {
                 return (
-                    <Link href={`/product/${products.id}`}
+                    <Link href={`/product/${products.id}`} prefetch={false}
                         key={products.id}>
                         <Product className="keen-slider__slide">
                             <Image src={products.imageUrl} alt={""} width={520} height={480} />
